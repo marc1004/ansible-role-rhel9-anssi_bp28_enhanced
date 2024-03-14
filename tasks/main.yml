@@ -633,7 +633,8 @@
   - restrict_strategy | bool
 
 - name: Read signatures in GPG key
-  command: gpg --show-keys --with-fingerprint --with-colons "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+  # command: gpg --show-keys --with-fingerprint --with-colons "/etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release"
+  command: gpg --show-keys --with-fingerprint --with-colons "/etc/pki/rpm-gpg/RPM-GPG-KEY-Rocky-9"
   changed_when: false
   register: gpg_fingerprints
   check_mode: false
@@ -701,6 +702,7 @@
     gpg_valid_fingerprints:
     - 567E347AD0044ADE55BA8A5F199E2F91FD431D51
     - 7E4624258C406535D56D6F135054E4A45A6340B3
+    - 21CB256AE16FC54C6E652949702D426D350D275D
   tags:
   - CCE-84180-9
   - CJIS-5.10.4.1

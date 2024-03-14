@@ -332,11 +332,11 @@ skip_ansible_lint: true
 sshd_disable_root_login: true
 sshd_set_idle_timeout: true
 sshd_set_keepalive: true
-sudo_add_noexec: false
-sudo_add_requiretty: false
+sudo_add_noexec: true
+sudo_add_requiretty: true
 sudo_add_use_pty: true
 sudo_remove_no_authenticate: true
-sudo_remove_nopasswd: false
+sudo_remove_nopasswd: true
 sysctl_fs_protected_fifos: true
 sysctl_fs_protected_hardlinks: true
 sysctl_fs_protected_regular: true
